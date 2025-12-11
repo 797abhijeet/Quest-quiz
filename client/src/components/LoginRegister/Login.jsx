@@ -29,11 +29,11 @@ const Login = (props) => {
       }
 
       try {
-        const response = await axios.post("http://localhost:8000/login-user", {
+        const response = await axios.post("https://quiz-backend-5-nrjf.onrender.com/login-user", {
           email: email,
           password: pass,
         });
-        // console.log(response);
+        console.log(response);
         if (!response) {
           setisError(true);
           setError("Something went wrong");
@@ -69,7 +69,7 @@ const Login = (props) => {
       }
 
       try {
-        const response = await axios.post("http://localhost:8000/login-admin", {
+        const response = await axios.post("https://quiz-backend-5-nrjf.onrender.com/login-admin", {
           email: email,
           password: pass,
         });

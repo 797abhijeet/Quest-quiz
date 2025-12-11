@@ -21,7 +21,7 @@ const Result = () => {
 
   const getResult = async () => {
     try {
-      const response = await axios.post("http://localhost:8000/get-result", {
+      const response = await axios.post("https://quiz-backend-5-nrjf.onrender.com/get-result", {
         userId: send.userId,
         quizId: send.quizId,
       });
