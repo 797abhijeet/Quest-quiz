@@ -24,7 +24,7 @@ const Register = (props) => {
 
       try {
         const response = await axios.post(
-          "https://quiz-backend-5-nrjf.onrender.com/register-user",
+          "http://localhost:8000/register-user",
           {
             name: name,
             email: email,
@@ -58,7 +58,7 @@ const Register = (props) => {
 
       try {
         const response = await axios.post(
-          "https://quiz-backend-5-nrjf.onrender.com/register-admin",
+          "http://localhost:8000/register-admin",
           {
             name: name,
             email: email,

@@ -24,7 +24,7 @@ const Quizcode = () => {
   const getHistory = async () => {
     try {
       const response = await axios.post(
-        "https://quiz-backend-5-nrjf.onrender.com/get-userHistory",
+        "http://localhost:3000/get-userHistory",
         {
           userId: loginId.userId,
         }
@@ -45,7 +45,7 @@ const Quizcode = () => {
     // getHistory();
     // console.log(quizCode)
 
-    const response = await axios.post("https://quiz-backend-5-nrjf.onrender.com/get-quiz", {
+    const response = await axios.post("http://localhost:8000/get-quiz", {
       quizId: quizCode,
     });
 

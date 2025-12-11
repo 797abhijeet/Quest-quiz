@@ -29,7 +29,7 @@ const Login = (props) => {
       }
 
       try {
-        const response = await axios.post("https://quiz-backend-5-nrjf.onrender.com/login-user", {
+        const response = await axios.post("http://localhost:8000/login-user", {
           email: email,
           password: pass,
         });
@@ -69,7 +69,7 @@ const Login = (props) => {
       }
 
       try {
-        const response = await axios.post("https://quiz-backend-5-nrjf.onrender.com/login-admin", {
+        const response = await axios.post("http://localhost:8000/login-admin", {
           email: email,
           password: pass,
         });
