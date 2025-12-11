@@ -45,7 +45,7 @@ const Quizcode = () => {
     // getHistory();
     // console.log(quizCode)
 
-    const response = await axios.post("http://localhost:8000/get-quiz", {
+    const response = await axios.post("https://quiz-backend-5-nrjf.onrender.com/get-quiz", {
       quizId: quizCode,
     });
 

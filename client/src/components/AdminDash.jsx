@@ -27,7 +27,7 @@ const AdminDash = () => {
 
   const deleteQuiz = async (i) => {
     console.log(loginId.quizIds, loginId.quizIds[i]);
-    const response = await axios.post("http://localhost:8000/delete-quiz", {
+    const response = await axios.post("https://quiz-backend-5-nrjf.onrender.com/delete-quiz", {
       quizId: loginId.quizIds[i],
     });
 
@@ -41,7 +41,7 @@ const AdminDash = () => {
     // console.log('here is login id',loginId.adminId)
     try {
       // console.log('here is quizids...',loginId.quizIds)
-      const response = await axios.post("http://localhost:8000/get-quizzes", {
+      const response = await axios.post("https://quiz-backend-5-nrjf.onrender.com/get-quizzes", {
         quizIds: loginId.quizIds,
       });
       if (response) {
@@ -55,7 +55,7 @@ const AdminDash = () => {
 
   const viewQuiz = async(i) => {
     console.log(quizDetail[i]._id)
-    const response = await axios.post('http://localhost:8000/get-quiz',{
+    const response = await axios.post('https://quiz-backend-5-nrjf.onrender.com/get-quiz',{
       quizId: quizDetail[i]._id
     })
     if(!response){
